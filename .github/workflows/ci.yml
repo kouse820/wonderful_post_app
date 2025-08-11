@@ -8,7 +8,6 @@ on:
 jobs:
   scan_ruby:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -24,19 +23,21 @@ jobs:
 
   scan_js:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
+      - name: Set up Node
+        uses: actions/setup-node@v4
         with:
-          ruby-version: .ruby-version
-          bundler-cache: true
+          node-version: '20'
+          cache: 'npm'
 
-      - name: Scan for security vulnerabilities in JavaScript dependencies
-        run: bin/importmap audit
+      - name: Install JS deps
+        run: npm ci
+
+      - name: Audit JS deps (prod only, high↑)
+        run: npm audit --omit=dev --audit-level=high
 
   lint:
     runs-on: ubuntu-latest
@@ -52,4 +53,3 @@ jobs:
 
       - name: Lint code for consistent style
         run: bin/rubocop -f github
-
