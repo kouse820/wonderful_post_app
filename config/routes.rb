@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   resources :articles #追記
+=======
+>>>>>>> parent of 93ca015 (Task. 7-3 article作成→表示(index, show, new, create))
   resources :sample_articles
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
