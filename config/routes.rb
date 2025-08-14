@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: "articles#index" #追記
+  resources :articles #追記
   resources :sample_articles
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
