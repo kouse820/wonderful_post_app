@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   root to: "articles#index" #追記
   resources :articles #追記
+=======
+<<<<<<< HEAD
+  resources :articles #追記
+=======
+>>>>>>> parent of 93ca015 (Task. 7-3 article作成→表示(index, show, new, create))
+>>>>>>> 6f987e84018cd2b64288cd74bc5c5aef7ef56c79
   resources :sample_articles
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
