@@ -32,11 +32,13 @@ class ArticlesController < ApplicationController
       redirect_to @article, notice: "Article was successfully updated."
     else
       render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
       @article.destroy
-      redirect_to article_url, notice: "Article was successfully destroyed"
+      redirect_to articles_url, notice: "Article was successfully destroyed"
+    end
   end
 
 
