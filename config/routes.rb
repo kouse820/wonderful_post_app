@@ -1,14 +1,8 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-  root to: "articles#index" #追記
-  resources :articles #追記
-=======
-<<<<<<< HEAD
-  resources :articles #追記
-=======
->>>>>>> parent of 93ca015 (Task. 7-3 article作成→表示(index, show, new, create))
->>>>>>> 6f987e84018cd2b64288cd74bc5c5aef7ef56c79
-  resources :sample_articles
+  root to: "articles#index" # トップページを articles#index に設定
+  resources :articles       # Article の CRUD ルーティング
+  resources :sample_articles # SampleArticle の CRUD ルーティング
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -18,7 +12,4 @@ Rails.application.routes.draw do
   # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
-
-  # Defines the root path route ("/")
-  # root "posts#index"
 end
