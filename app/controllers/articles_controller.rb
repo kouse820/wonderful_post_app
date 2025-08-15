@@ -18,9 +18,9 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     if @article.save
-      redirect_to @article, notice: "Article was successfully created." # ← HTMLのリダイレクト
+      redirect_to @article, notice: "Article was successfully created."
     else
-      render :new, status: :unprocessable_entity # ← HTMLビューの再表示（フォームに戻る）
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -40,8 +40,8 @@ class ArticlesController < ApplicationController
     redirect_to articles_url, notice: "Article was successfully destroyed"
   end
 
+  private
 
- private
   def set_article
     @article = Article.find(params[:id])
   end
