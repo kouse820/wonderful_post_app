@@ -36,8 +36,8 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-      @article.destroy
-      redirect_to articles_url, notice: "Article was successfully destroyed"
+    @article.destroy
+    redirect_to articles_url, notice: "Article was successfully destroyed"
   end
 
 
