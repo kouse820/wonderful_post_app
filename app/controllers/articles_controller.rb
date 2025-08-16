@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: %i[ show ]
+  before_action :set_article, only: %i[ show edit update destroy ]
 
   # GET /articles
   def index
@@ -18,9 +18,9 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     if @article.save
-      redirect_to @article, notice: "Article was successfully created." # ← HTMLのリダイレクト
+      redirect_to @article, notice: "Article was successfully created."
     else
-      render :new, status: :unprocessable_entity # ← HTMLビューの再表示（フォームに戻る）
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -32,15 +32,21 @@ class ArticlesController < ApplicationController
       redirect_to @article, notice: "Article was successfully updated."
     else
       render :edit, status: :unprocessable_entity
+    end
   end
 
-
- private
-  def set_article
-    @article = Article.find(params[:id])
+  # DELETE /articles/1
+  def destroy
+    @article.destroy
+    edirect_to articles_url, notice: "Article was successfully destroyed."
   end
 
-  def article_params
-    params.require(:article).permit(:title, :body)
-  end
+  private
+    def set_article
+      @article = Article.find(params[:id])
+    end
+
+    def article_params
+      params.require(:article).permit(:title, :content)
+    end
 end
