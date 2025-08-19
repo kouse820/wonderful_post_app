@@ -1,0 +1,15 @@
+## 日本語の宣言
+ja:
+  hello: "こんにちは"
+
+  # activerecord関連する項目ということを宣言
+  activerecord:
+    # modelを宣言
+    models:
+      article: 記事
+
+  # modelのattribute名テーブルのカラム名を宣言
+  attributes:
+    article:
+      title: タイトル
+      content: 本文

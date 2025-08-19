@@ -60,3 +60,4 @@ group :development do
 end
 
 gem "vite_rails", "~> 3.0"
+gem 'rails-i18n', '~> 8.0.1'
