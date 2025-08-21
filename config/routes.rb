@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root to: "articles#index" # トップページを articles#index に設定
   resources :articles       # Article の CRUD ルーティング
   resources :sample_articles # SampleArticle の CRUD ルーティング
+  devise_for :users # ユーザー認証のルーティングを生成
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
