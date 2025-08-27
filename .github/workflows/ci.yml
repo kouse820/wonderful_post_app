@@ -9,12 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.4.3'     # プロジェクトのRubyに合わせて
+          ruby-version: '3.4.3'
           bundler-cache: true
+
       - name: RuboCop
-        run: bin/rubocop -f github   # bin が無ければ: bundle exec rubocop -f github
+        run: bundle exec rubocop -c .rubocop.yml -f github
 
   brakeman:
     runs-on: ubuntu-latest
@@ -35,14 +37,14 @@ jobs:
       - name: Set up Node (for Vite)
         uses: actions/setup-node@v4
         with:
-          node-version: '20.19.0'    # Vite要件 >= 20.19
+          node-version: '20.19.0'
           cache: 'yarn'
 
       - name: Enable Corepack (Yarn 4)
         run: corepack enable
 
       - name: Install JS deps (Yarn)
-        run: yarn install --immutable  # npm ci 相当（yarn.lock厳守）
+        run: yarn install --immutable
 
       - name: Build assets (Vite)
-        run: yarn build                # package.json の "build": "vite build"
+        run: yarn build
