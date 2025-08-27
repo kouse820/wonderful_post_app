@@ -60,5 +60,6 @@ group :development do
 end
 
 gem "vite_rails", "~> 3.0"
-gem 'rails-i18n', '~> 8.0.1'
-gem 'devise', github: 'heartcombo/devise', branch: 'main'
+gem "rails-i18n", "~> 8.0.1"
+gem "devise", github: "heartcombo/devise", branch: "main"
+gem "devise-i18n"
