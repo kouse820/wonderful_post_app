@@ -1,55 +1,48 @@
 name: CI
 
 on:
-  pull_request:
   push:
-    branches: [ main ]
+  pull_request:
 
 jobs:
-  scan_ruby:
+  rubocop:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: .ruby-version
+          ruby-version: '3.4.3'     # プロジェクトのRubyに合わせて
           bundler-cache: true
+      - name: RuboCop
+        run: bin/rubocop -f github   # bin が無ければ: bundle exec rubocop -f github
 
-      - name: Scan for common Rails security vulnerabilities using static analysis
-        run: bin/brakeman --no-pager
+  brakeman:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4.3'
+          bundler-cache: true
+      - name: Brakeman
+        run: bundle exec brakeman --no-pager
 
   scan_js:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Node
+      - name: Set up Node (for Vite)
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: '20.19.0'    # Vite要件 >= 20.19
+          cache: 'yarn'
 
-      - name: Install JS deps
-        run: npm ci
+      - name: Enable Corepack (Yarn 4)
+        run: corepack enable
 
-      - name: Audit JS deps (prod only, high↑)
-        run: npm audit --omit=dev --audit-level=high
+      - name: Install JS deps (Yarn)
+        run: yarn install --immutable  # npm ci 相当（yarn.lock厳守）
 
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: .ruby-version
-          bundler-cache: true
-
-      - name: Lint code for consistent style
-        run: bin/rubocop -f github
+      - name: Build assets (Vite)
+        run: yarn build                # package.json の "build": "vite build"
