@@ -47,10 +47,10 @@ jobs:
           corepack enable
           corepack prepare yarn@4.9.2 --activate
 
-      - name: Show Yarn version
+      - name: Verify Yarn version
         run: yarn -v
 
-      - name: Install JavaScript dependencies
+      - name: Install JS dependencies
         run: yarn install --immutable
 
       - name: Build assets with Vite
