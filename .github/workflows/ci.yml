@@ -15,18 +15,20 @@ jobs:
           ruby-version: '3.4.3'
           bundler-cache: true
 
-      - name: RuboCop
+      - name: Run RuboCop
         run: bundle exec rubocop -c .rubocop.yml -f github
 
   brakeman:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.4.3'
           bundler-cache: true
-      - name: Brakeman
+
+      - name: Run Brakeman
         run: bundle exec brakeman --no-pager
 
   scan_js:
@@ -34,17 +36,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Node (for Vite)
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20.19.0'
           cache: 'yarn'
 
-      - name: Enable Corepack (Yarn 4)
-        run: corepack enable
+      - name: Enable Corepack and prepare Yarn
+        run: |
+          corepack enable
+          corepack prepare yarn@4.9.2 --activate
 
-      - name: Install JS deps (Yarn)
+      - name: Verify Yarn version
+        run: yarn -v
+
+      - name: Install JS dependencies
         run: yarn install --immutable
 
-      - name: Build assets (Vite)
+      - name: Build assets with Vite
         run: yarn build
