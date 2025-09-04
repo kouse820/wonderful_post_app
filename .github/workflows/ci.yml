@@ -36,13 +36,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Enable Corepack and prepare Yarn
+      - name: Set up Node.js with Corepack
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.19.0'
+          cache: 'yarn'
+          corepack: true  # Corepack を有効化
+
+      - name: Enable and activate Yarn 4
         run: |
           corepack enable
           corepack prepare yarn@4.9.2 --activate
 
-      - name: Use Yarn 4
-        run: yarn -v  # この時点で yarn 4.9.2 が使われるはずです
+      - name: Confirm Yarn version
+        run: yarn -v
 
       - name: Install JS dependencies
         run: yarn install --immutable
