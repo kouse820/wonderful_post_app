@@ -36,22 +36,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20.19.0'
-          cache: 'yarn'
-
       - name: Enable Corepack and prepare Yarn
         run: |
           corepack enable
           corepack prepare yarn@4.9.2 --activate
 
-      - name: Verify Yarn version
-        run: yarn -v
+      - name: Use Yarn 4
+        run: yarn -v  # この時点で yarn 4.9.2 が使われるはずです
 
       - name: Install JS dependencies
-        run: yarn install
+        run: yarn install --immutable
 
       - name: Build assets with Vite
         run: yarn build
