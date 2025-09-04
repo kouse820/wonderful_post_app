@@ -51,7 +51,7 @@ jobs:
         run: yarn -v
 
       - name: Install JS dependencies
-        run: yarn install --immutable
+        run: yarn install
 
       - name: Build assets with Vite
         run: yarn build
