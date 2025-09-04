@@ -28,11 +28,6 @@ console.log('Visit the guide for more information: ', 'https://vite-ruby.netlify
 // import '~/index.css'
 // app/frontend/entrypoints/application.js
 
-import Rails from "@rails/ujs"
-import * as ActiveStorage from "@rails/activestorage"
-import "channels" // 必要に応じて
-import "bootstrap"
-import "../stylesheets/application" // SCSS または CSS 読み込み
+import { Turbo } from "@hotwired/turbo-rails"
 
-Rails.start()
-ActiveStorage.start()
+import "bootstrap"
