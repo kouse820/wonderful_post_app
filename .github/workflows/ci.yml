@@ -36,18 +36,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Node.js
+      - name: Set up Node.js with Corepack
         uses: actions/setup-node@v4
         with:
           node-version: '20.19.0'
           cache: 'yarn'
+          corepack: true  # Corepack を有効化
 
-      - name: Enable Corepack and prepare Yarn
+      - name: Enable and activate Yarn 4
         run: |
           corepack enable
           corepack prepare yarn@4.9.2 --activate
 
-      - name: Verify Yarn version
+      - name: Confirm Yarn version
         run: yarn -v
 
       - name: Install JS dependencies

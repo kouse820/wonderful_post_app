@@ -31,3 +31,4 @@ console.log('Visit the guide for more information: ', 'https://vite-ruby.netlify
 import { Turbo } from "@hotwired/turbo-rails"
 
 import "bootstrap"
+

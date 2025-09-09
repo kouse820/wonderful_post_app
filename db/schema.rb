@@ -24,13 +24,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_09_04_222243) do
     t.index ["user_id"], name: "index_articles_on_user_id"
   end
 
-  create_table "sample_articles", force: :cascade do |t|
-    t.string "title"
-    t.text "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "tags", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
