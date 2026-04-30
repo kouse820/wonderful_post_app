@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ruby --version)",
+      "Bash(gem list *)",
+      "Bash(yarn --version)",
+      "Bash(npm install *)",
+      "Bash(rails *)",
+      "Bash(gem install *)",
+      "Bash(ruby -e \"require 'logger'; puts Logger::VERSION\")",
+      "Bash(RUBYOPT='-r logger' rails *)",
+      "Bash(bundle install *)"
+    ]
+  }
+}
