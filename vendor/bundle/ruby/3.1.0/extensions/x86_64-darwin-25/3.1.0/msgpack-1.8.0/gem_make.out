@@ -13,10 +13,10 @@ checking for whether -DSTR_UMINUS_DEDUPE_FROZEN=1 is accepted as CFLAGS... no
 creating Makefile
 
 current directory: /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/ruby/3.1.0/gems/msgpack-1.8.0/ext/msgpack
-make DESTDIR\= sitearchdir\=./.gem.20260430-41183-zrc7ud sitelibdir\=./.gem.20260430-41183-zrc7ud clean
+make DESTDIR\= sitearchdir\=./.gem.20260430-2686-r6dsyl sitelibdir\=./.gem.20260430-2686-r6dsyl clean
 
 current directory: /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/ruby/3.1.0/gems/msgpack-1.8.0/ext/msgpack
-make DESTDIR\= sitearchdir\=./.gem.20260430-41183-zrc7ud sitelibdir\=./.gem.20260430-41183-zrc7ud
+make DESTDIR\= sitearchdir\=./.gem.20260430-2686-r6dsyl sitelibdir\=./.gem.20260430-2686-r6dsyl
 compiling buffer.c
 In file included from buffer.c:19:
 In file included from ./buffer.h:21:
@@ -203,5 +203,5 @@ linking shared-object msgpack/msgpack.bundle
 ld: warning: ignoring duplicate libraries: '-lruby.3.1'
 
 current directory: /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/ruby/3.1.0/gems/msgpack-1.8.0/ext/msgpack
-make DESTDIR\= sitearchdir\=./.gem.20260430-41183-zrc7ud sitelibdir\=./.gem.20260430-41183-zrc7ud install
-/usr/bin/install -c -m 0755 msgpack.bundle ./.gem.20260430-41183-zrc7ud/msgpack
+make DESTDIR\= sitearchdir\=./.gem.20260430-2686-r6dsyl sitelibdir\=./.gem.20260430-2686-r6dsyl install
+/usr/bin/install -c -m 0755 msgpack.bundle ./.gem.20260430-2686-r6dsyl/msgpack

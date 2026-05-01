@@ -3,10 +3,10 @@ current directory: /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/ru
 creating Makefile
 
 current directory: /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/ruby/3.1.0/gems/byebug-12.0.0/ext/byebug
-make DESTDIR\= sitearchdir\=./.gem.20260430-41183-2emaaa sitelibdir\=./.gem.20260430-41183-2emaaa clean
+make DESTDIR\= sitearchdir\=./.gem.20260430-2686-kwhdrl sitelibdir\=./.gem.20260430-2686-kwhdrl clean
 
 current directory: /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/ruby/3.1.0/gems/byebug-12.0.0/ext/byebug
-make DESTDIR\= sitearchdir\=./.gem.20260430-41183-2emaaa sitelibdir\=./.gem.20260430-41183-2emaaa
+make DESTDIR\= sitearchdir\=./.gem.20260430-2686-kwhdrl sitelibdir\=./.gem.20260430-2686-kwhdrl
 compiling breakpoint.c
 In file included from breakpoint.c:1:
 In file included from ./byebug.h:4:
@@ -81,5 +81,5 @@ linking shared-object byebug/byebug.bundle
 ld: warning: ignoring duplicate libraries: '-lruby.3.1'
 
 current directory: /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/ruby/3.1.0/gems/byebug-12.0.0/ext/byebug
-make DESTDIR\= sitearchdir\=./.gem.20260430-41183-2emaaa sitelibdir\=./.gem.20260430-41183-2emaaa install
-/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20260430-41183-2emaaa/byebug
+make DESTDIR\= sitearchdir\=./.gem.20260430-2686-kwhdrl sitelibdir\=./.gem.20260430-2686-kwhdrl install
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20260430-2686-kwhdrl/byebug
