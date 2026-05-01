@@ -22,7 +22,11 @@
       "Bash(kill %1)",
       "Bash(echo \"exit: $?\")",
       "Bash(lsof -ti:3000)",
-      "Bash(xargs kill *)"
+      "Bash(xargs kill *)",
+      "Bash(codesign *)",
+      "Bash(xattr /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.24.1/lib/bootsnap/bootsnap.bundle)",
+      "Bash(xattr /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/ruby/3.1.0/gems/date-3.5.1/lib/date_core.bundle)",
+      "Bash(xattr -r -d com.apple.quarantine /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/)"
     ]
   }
 }
