@@ -9,11 +9,7 @@
       "Bash(gem install *)",
       "Bash(ruby -e \"require 'logger'; puts Logger::VERSION\")",
       "Bash(RUBYOPT='-r logger' rails *)",
-      "Bash(bundle install *)",
-      "Bash(bundle exec *)",
-      "Bash(psql -U postgres -c '\\\\du')",
-      "Bash(psql -c '\\\\du')",
-      "Bash(psql *)"
+      "Bash(bundle install *)"
     ]
   }
 }
