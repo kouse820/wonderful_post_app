@@ -3,10 +3,10 @@ current directory: /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/ru
 creating Makefile
 
 current directory: /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/ruby/3.1.0/gems/racc-1.8.1/ext/racc/cparse
-make DESTDIR\= sitearchdir\=./.gem.20260430-2686-4s62s7 sitelibdir\=./.gem.20260430-2686-4s62s7 clean
+make DESTDIR\= sitearchdir\=./.gem.20260430-41183-bmgb0a sitelibdir\=./.gem.20260430-41183-bmgb0a clean
 
 current directory: /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/ruby/3.1.0/gems/racc-1.8.1/ext/racc/cparse
-make DESTDIR\= sitearchdir\=./.gem.20260430-2686-4s62s7 sitelibdir\=./.gem.20260430-2686-4s62s7
+make DESTDIR\= sitearchdir\=./.gem.20260430-41183-bmgb0a sitelibdir\=./.gem.20260430-41183-bmgb0a
 compiling cparse.c
 In file included from cparse.c:12:
 In file included from /Users/takegaharakose/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby.h:38:
@@ -24,5 +24,5 @@ linking shared-object racc/cparse.bundle
 ld: warning: ignoring duplicate libraries: '-lruby.3.1'
 
 current directory: /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/ruby/3.1.0/gems/racc-1.8.1/ext/racc/cparse
-make DESTDIR\= sitearchdir\=./.gem.20260430-2686-4s62s7 sitelibdir\=./.gem.20260430-2686-4s62s7 install
-/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20260430-2686-4s62s7/racc
+make DESTDIR\= sitearchdir\=./.gem.20260430-41183-bmgb0a sitelibdir\=./.gem.20260430-41183-bmgb0a install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20260430-41183-bmgb0a/racc
