@@ -14,10 +14,10 @@ checking for sys/resource.h... yes
 creating Makefile
 
 current directory: /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/ruby/3.1.0/gems/nio4r-2.7.5/ext/nio4r
-make DESTDIR\= sitearchdir\=./.gem.20260501-38610-gr1y09 sitelibdir\=./.gem.20260501-38610-gr1y09 clean
+make DESTDIR\= sitearchdir\=./.gem.20260501-9386-b5admv sitelibdir\=./.gem.20260501-9386-b5admv clean
 
 current directory: /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/ruby/3.1.0/gems/nio4r-2.7.5/ext/nio4r
-make DESTDIR\= sitearchdir\=./.gem.20260501-38610-gr1y09 sitelibdir\=./.gem.20260501-38610-gr1y09
+make DESTDIR\= sitearchdir\=./.gem.20260501-9386-b5admv sitelibdir\=./.gem.20260501-9386-b5admv
 compiling bytebuffer.c
 In file included from bytebuffer.c:1:
 In file included from ./nio4r.h:10:
@@ -327,5 +327,5 @@ linking shared-object nio4r_ext.bundle
 ld: warning: ignoring duplicate libraries: '-lruby.3.1'
 
 current directory: /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/ruby/3.1.0/gems/nio4r-2.7.5/ext/nio4r
-make DESTDIR\= sitearchdir\=./.gem.20260501-38610-gr1y09 sitelibdir\=./.gem.20260501-38610-gr1y09 install
-/usr/bin/install -c -m 0755 nio4r_ext.bundle ./.gem.20260501-38610-gr1y09
+make DESTDIR\= sitearchdir\=./.gem.20260501-9386-b5admv sitelibdir\=./.gem.20260501-9386-b5admv install
+/usr/bin/install -c -m 0755 nio4r_ext.bundle ./.gem.20260501-9386-b5admv

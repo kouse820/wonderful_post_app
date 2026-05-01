@@ -19,7 +19,10 @@
       "Bash(RUBYOPT='-r logger' bundle exec *)",
       "Bash(DISABLE_SPRING=1 bundle exec rails db:create)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
-      "Bash(kill %1)"
+      "Bash(kill %1)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(lsof -ti:3000)",
+      "Bash(xargs kill *)"
     ]
   }
 }

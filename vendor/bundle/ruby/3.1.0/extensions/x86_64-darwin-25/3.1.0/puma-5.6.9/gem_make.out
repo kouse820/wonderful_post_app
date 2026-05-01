@@ -14,10 +14,10 @@ checking for Random.bytes... yes
 creating Makefile
 
 current directory: /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/ruby/3.1.0/gems/puma-5.6.9/ext/puma_http11
-make DESTDIR\= sitearchdir\=./.gem.20260501-32908-s8epc3 sitelibdir\=./.gem.20260501-32908-s8epc3 clean
+make DESTDIR\= sitearchdir\=./.gem.20260501-9386-wny5lx sitelibdir\=./.gem.20260501-9386-wny5lx clean
 
 current directory: /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/ruby/3.1.0/gems/puma-5.6.9/ext/puma_http11
-make DESTDIR\= sitearchdir\=./.gem.20260501-32908-s8epc3 sitelibdir\=./.gem.20260501-32908-s8epc3
+make DESTDIR\= sitearchdir\=./.gem.20260501-9386-wny5lx sitelibdir\=./.gem.20260501-9386-wny5lx
 compiling http11_parser.c
 In file included from ext/puma_http11/http11_parser.rl:6:
 In file included from ./http11_parser.h:11:
@@ -62,5 +62,5 @@ linking shared-object puma/puma_http11.bundle
 ld: warning: ignoring duplicate libraries: '-lruby.3.1'
 
 current directory: /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/ruby/3.1.0/gems/puma-5.6.9/ext/puma_http11
-make DESTDIR\= sitearchdir\=./.gem.20260501-32908-s8epc3 sitelibdir\=./.gem.20260501-32908-s8epc3 install
-/usr/bin/install -c -m 0755 puma_http11.bundle ./.gem.20260501-32908-s8epc3/puma
+make DESTDIR\= sitearchdir\=./.gem.20260501-9386-wny5lx sitelibdir\=./.gem.20260501-9386-wny5lx install
+/usr/bin/install -c -m 0755 puma_http11.bundle ./.gem.20260501-9386-wny5lx/puma
