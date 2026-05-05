@@ -30,7 +30,9 @@
       "Bash(git pull *)",
       "Bash(git stash *)",
       "Bash(git add *)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "Bash(pg_config --sysconfdir)",
+      "Read(//usr/local/var/**)"
     ]
   }
 }
