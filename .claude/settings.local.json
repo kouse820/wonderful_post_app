@@ -32,7 +32,17 @@
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
       "Bash(pg_config --sysconfdir)",
-      "Read(//usr/local/var/**)"
+      "Read(//usr/local/var/**)",
+      "Bash(xargs ls -la)",
+      "Bash(RUBYOPT='-r logger' bundle install *)",
+      "Bash(ruby extconf.rb)",
+      "Bash(make)",
+      "Bash(cp /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/ruby/3.1.0/gems/bcrypt-3.1.22/ext/mri/bcrypt_ext.bundle /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/ruby/3.1.0/gems/bcrypt-3.1.22/lib/)",
+      "Bash(mkdir -p /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/ruby/3.1.0/extensions/x86_64-darwin-25/3.1.0/bcrypt-3.1.22/)",
+      "Bash(cp /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/ruby/3.1.0/gems/bcrypt-3.1.22/ext/mri/bcrypt_ext.bundle /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/ruby/3.1.0/extensions/x86_64-darwin-25/3.1.0/bcrypt-3.1.22/)",
+      "Bash(mkdir -p /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/ruby/3.1.0/extensions/x86_64-darwin-25/3.1.0/bcrypt-3.1.22/bcrypt)",
+      "Bash(cp /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/ruby/3.1.0/gems/bcrypt-3.1.22/ext/mri/bcrypt_ext.bundle /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/ruby/3.1.0/extensions/x86_64-darwin-25/3.1.0/bcrypt-3.1.22/bcrypt/)",
+      "Bash(touch /Users/takegaharakose/git/wonderful_post_app/vendor/bundle/ruby/3.1.0/extensions/x86_64-darwin-25/3.1.0/bcrypt-3.1.22/gem.build_complete)"
     ]
   }
 }
