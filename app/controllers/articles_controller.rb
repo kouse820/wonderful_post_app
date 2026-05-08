@@ -7,9 +7,10 @@ class ArticlesController < ApplicationController
 
   # GET /articles
   def index
-    @articles = Article.all
+    articles = Article.all
+    articles = articles.where("title LIKE ?", "%#{params[:title]}%") if params[:title].present?
+    @articles = articles
   end
-
   # GET /articles/1
   def show
   end
@@ -42,7 +43,7 @@ class ArticlesController < ApplicationController
   # DELETE /articles/1
   def destroy
     @article.destroy
-    edirect_to articles_url, notice: "#{t('activerecord.models.article')}を削除しました。"
+    redirect_to articles_url, notice: "#{t('activerecord.models.article')}を削除しました。"
   end
 
   private
