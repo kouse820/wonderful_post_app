@@ -1,15 +1,15 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, only: %i[ new create edit update destroy ]
+  before_action :correct_user, only: %i[ edit update destroy ]
 
-  # GET /articles/1/edit
   def edit
   end
 
-  # GET /articles
   def index
     articles = Article.all.includes(:tags)
     articles = articles.where("title LIKE ?", "%#{params[:title]}%") if params[:title].present?
-    @articles = articles
+    @articles = articles.page(params[:page])
   end
   # GET /articles/1
   def show
@@ -47,11 +47,18 @@ class ArticlesController < ApplicationController
   end
 
   private
+
     def set_article
       @article = Article.find(params[:id])
     end
 
     def article_params
-      params.require(:article).permit(:title, :content, tag_ids:[])
+      params.require(:article).permit(:title, :content, tag_ids: [])
+    end
+
+    def correct_user
+      unless @article.user == current_user
+        redirect_to articles_path, alert: '権限がありません。'
+      end
     end
 end
