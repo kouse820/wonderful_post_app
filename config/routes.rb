@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'articles#index' #追記
+  root to: 'articles#index'
+  get 'mypage', to: 'mypage#show'
   resources :articles
-  resources :sample_articles
 end
