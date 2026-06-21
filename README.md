@@ -1,24 +1,35 @@
-# README
+# Wonderful Post App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## アプリ概要
+ユーザー登録・ログイン後に投稿を作成、編集、削除できるRails製の投稿アプリです。
 
-Things you may want to cover:
+## 使用技術
+- Ruby 3.1.3
+- Ruby on Rails 6.1.7
+- PostgreSQL
+- Devise
+- Kaminari
+- Docker / Docker Compose
 
-* Ruby version
+## 主な機能
+- ユーザー登録・ログイン機能
+- 投稿一覧表示
+- 投稿詳細表示
+- 投稿作成
+- 投稿編集
+- 投稿削除
+- ページネーション
 
-* System dependencies
+## 工夫した点
+- Deviseを使って認証機能を実装
+- Kaminariで投稿一覧のページネーションを実装
+- Docker Composeで開発環境を構築
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## セットアップ方法
+```bash
+git clone https://github.com/kouse820/wonderful_post_app.git
+cd wonderful_post_app
+docker compose build
+docker compose up
+docker compose exec web rails db:create
+docker compose exec web rails db:migrate
